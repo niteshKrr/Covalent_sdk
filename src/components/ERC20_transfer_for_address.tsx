@@ -5,7 +5,7 @@ const ERC20_transfer_for_address = () => {
   const transfers = () => {
     axios
       .get(
-        "https://api.covalenthq.com/v1/1/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045/transfers_v2/?contract-address=0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0&key=ckey_72773976706e44d2967b834462e"
+        `https://api.covalenthq.com/v1/1/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045/transfers_v2/?contract-address=0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0&key=${process.env.NEXT_PUBLIC_API_KEY}`
       )
       .then(function (response) {
         // handle success
